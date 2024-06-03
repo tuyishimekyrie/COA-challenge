@@ -58,6 +58,14 @@ body {
   position: absolute;
   bottom: 0;
   padding: 2rem;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.9));
+}
+.details.active {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01));
+    
+    
+
 }
 .details h1 {
   color: var(--slate-50);
