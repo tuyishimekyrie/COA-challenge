@@ -65,12 +65,14 @@ body {
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+  transition: all 0.3s ease-in-out;
 }
 .details p {
   color: var(--slate-200);
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   padding: 0.5rem 0;
+  transition: all 0.3s ease-in-out;
 }
 .more-info {
   display: none;
@@ -85,4 +87,21 @@ body {
   color: var(--light-blue);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+}
+
+@media (max-width: 800px) {
+  .details h1 {
+    font-size: 1rem;
+  }
+  .details p {
+    font-size: 0.5rem;
+  }
+  .details span {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .details {
+    display: none;
+  }
 }
