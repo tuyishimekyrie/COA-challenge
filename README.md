@@ -3,9 +3,11 @@
 ![Gallery Demo](./assets/COA.PNG)
 ![Gallery Demo](./assets/COA2.PNG)
 
-Live Site URL: [COA-challenge](https://coa-challenge.vercel.app/)
+**Live Site URL:** [COA-challenge](https://coa-challenge.vercel.app/)
 
-This project presents a gallery of animal images with overlay effects on hover, designed to showcase different animals and provide additional information when the user interacts with the images.
+## Overview
+
+COA-challenge is a web application showcasing an interactive gallery of animal images. It features elegant overlay effects upon image hover, providing users with a visually engaging experience. The project aims to demonstrate the implementation of modern web design techniques and user interaction enhancements.
 
 ## Table of Contents
 
@@ -14,51 +16,75 @@ This project presents a gallery of animal images with overlay effects on hover, 
 - [Usage](#usage)
 - [Code Structure](#code-structure)
 - [Technologies](#technologies)
-- [License](#license)
+- [Solutions to Coding Challenges](#solutions-to-coding-challenges)
+
 
 ## Features
 
-- Image gallery with hover effects
-- Overlay with additional information
-- Smooth transitions
+- **Interactive Gallery:** Users can hover over images to reveal overlay effects with additional information.
+- **Smooth Transitions:** Seamless transitions enhance the user experience, providing a polished look and feel.
 
 ## Installation
+
+To run the project locally, follow these steps:
 
 1. Clone the repository:
 
    ```sh
    git clone https://github.com/yourusername/COA-challenge.git
+   ```
 
+2. Open the project directory and launch `index.html` in your preferred web browser.
 
-Usage
-Open index.html in your preferred web browser.
-Code Structure
-HTML
-The HTML file includes a gallery container with multiple image wrappers. Each image wrapper contains a photo frame with an image, an overlay, and a details section.
+## Usage
 
-CSS
-The CSS file includes styles for the gallery, photo frames, and overlay effects.
+Simply open the `index.html` file in your web browser to explore the interactive gallery.
 
-JavaScript
-The JavaScript file handles the hover effects, adding and removing the active class on the overlay.
+## Code Structure
 
-Technologies
-HTML
-CSS
-JavaScript
+The project follows a structured organization:
 
-Solutions to Coding Challenges
-Problem 1: Contiguous Subarray Sum
-Description: Given an array of integers and a target sum, determine if there exists a contiguous subarray within the array that sums up to the target.
+- **HTML:** Defines the gallery container, image wrappers, photo frames, overlays, and details sections.
+- **CSS:** Styles the gallery, photo frames, and overlay effects for a visually appealing presentation.
+- **JavaScript:** Manages hover effects by adding and removing the active class on the overlay elements.
 
-Implementation: Sliding window technique is used for an efficient solution.
+## Technologies
 
-Problem 2: String Transformation
-Description: Given a string, transform it based on certain rules depending on its length being divisible by 3, 5, or both.
+The project utilizes the following technologies:
 
-Implementation: Conditional logic is applied to reverse the string, replace characters with ASCII codes, or perform both operations based on the string's length.
+- HTML
+- CSS
+- JavaScript
 
+## Solutions to Coding Challenges
 
-License
-This project is licensed under the MIT License.
-`https://coa-challenge.vercel.app/`
+### Problem 1: Contiguous Subarray Sum
+
+- **Description:** Determines if there exists a contiguous subarray within an array that sums up to a target.
+- **Implementation:** Utilizes the sliding window technique for an efficient solution.
+
+#### Example:
+
+```javascript
+const arr = [4, 2, 7, 1, 9, 5];
+const target = 14;
+console.log(hasSubarrayWithSum(arr, target));
+//true
+```
+
+### Problem 2: String Transformation
+
+- **Description:** Transforms a string based on length divisibility by 3, 5, or both.
+- **Implementation:** Applies conditional logic to reverse the string, replace characters with ASCII codes, or perform both operations.
+
+```javascript
+let input = "Amsterdam";
+let output = transformString(input);
+console.log(`Output: "${output}"`); 
+// Output: "madretsmA"
+
+let input = "hanga";
+let output = transformString(input);
+console.log(`Output: "${output}"`); 
+//Output: "104 97 110 103 97"
+```

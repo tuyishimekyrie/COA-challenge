@@ -7,13 +7,14 @@
 
 :root {
   --light-blue: #42c1ff;
-  --slate-800: #0f172a;
+  --slate-800: #0a0a0a;
   --slate-50: #f8fafc;
   --slate-200: #e4e4e7;
 }
 body {
   background-color: var(--slate-800);
   overflow-y: hidden;
+  padding: 7rem 10rem;
 }
 
 .gallery-container {
@@ -22,17 +23,18 @@ body {
 }
 .image-wrapper {
   width: 25vw;
-  height: 100vh;
+  height: 65vh;
   position: relative;
 }
 .photo-frame {
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
+  transition: transform 4s ease-in-out;
 }
 .photo-frame img.active {
   transform: scale(1.05);
   transition: all 0.4s ease-in-out;
-  filter: grayscale(100%) blur(5px);
+  filter: grayscale(100%) blur(6.5px);
 }
 .overlay {
   display: none;
@@ -47,7 +49,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-   transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .photo-frame img {
   width: 100%;
@@ -61,11 +63,11 @@ body {
   padding: 2rem;
   width: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.95));
-  transition: all 0.4s ease-in-out,
+  transition: all 0.4s ease-in-out;
 }
 .details.active {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01));
-  transition: all 0.9s ease-in-out,
+  transition: all 0.5s ease-in-out;
 }
 .details h1 {
   color: var(--slate-50);
@@ -73,12 +75,19 @@ body {
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+  font-size: 2.2vw;
   transition: all 0.3s ease-in-out;
+}
+.details.active h1,
+.details.active p {
+  transform: translateY(-18px);
+  transition: transform 0.4s ease-in-out;
 }
 .details p {
   color: var(--slate-200);
   font-family: "Poppins", sans-serif;
   font-weight: 200;
+  transform: translateY(0px);
   padding: 0.5rem 0;
   transition: all 0.3s ease-in-out;
 }
@@ -93,12 +102,18 @@ body {
 }
 .more-info span {
   color: var(--light-blue);
+  font-size: 1vw;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  transition: all 0.4s ease-in-out,
+  transition: all 0.4s ease-in-out;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
+  .details {
+    padding: 0.6rem;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+  }
   .details h1 {
     font-size: 1rem;
   }
@@ -108,8 +123,16 @@ body {
   .details span {
     font-size: 0.5rem;
   }
+  .details.active h1,
+  .details.active p {
+    transform: translateY(-10px);
+    transition: transform 0.4s ease-in-out;
+  }
+  .more-info img {
+    width: 1rem;
+  }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .details {
     display: none;
   }

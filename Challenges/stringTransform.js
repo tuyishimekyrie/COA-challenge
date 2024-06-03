@@ -19,6 +19,6 @@ function transformString(input) {
   return input;
 }
 
-let input = "Hello World";
+let input = "hanga";
 let output = transformString(input);
 console.log(`Output: "${output}"`); 
