@@ -18,7 +18,7 @@ body {
 
 .gallery-container {
   display: flex;
-  gap: 0.25rem;
+  gap: 2px;
 }
 .image-wrapper {
   width: 25vw;
@@ -30,9 +30,9 @@ body {
   overflow: hidden;
 }
 .photo-frame img.active {
-  transform: scale(1.1);
-  transition: all 0.25s ease-in-out;
-  filter: blur(10px);
+  transform: scale(1.05);
+  transition: all 0.4s ease-in-out;
+  filter: grayscale(100%) blur(5px);
 }
 .overlay {
   display: none;
@@ -47,25 +47,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+   transition: all 0.4s ease-in-out;
 }
 .photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out;
+  transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
 }
 .details {
   position: absolute;
   bottom: 0;
   padding: 2rem;
   width: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.9));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.95));
+  transition: all 0.4s ease-in-out,
 }
 .details.active {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01));
-    
-    
-
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01));
+  transition: all 0.9s ease-in-out,
 }
 .details h1 {
   color: var(--slate-50);
@@ -89,12 +89,13 @@ body {
   display: flex;
   gap: 0.3rem;
   align-items: center;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .more-info span {
   color: var(--light-blue);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  transition: all 0.4s ease-in-out,
 }
 
 @media (max-width: 800px) {
