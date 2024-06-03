@@ -1,21 +1,24 @@
 function transformString(input) {
-  const length = input.length;
-  let result = "";
+  let length = input.length;
 
-  if (length % 3 === 0) {
-    result = input.split("").reverse().join("");
-  }
-
-  if (length % 5 === 0) {
-    result = result === "" ? input : result;
-    result = result
+  if (length % 15 === 0) {
+    input = input.split("").reverse().join("");
+    input = input
+      .split("")
+      .map((char) => char.charCodeAt(0))
+      .join(" ");
+  } else if (length % 3 === 0) {
+    input = input.split("").reverse().join("");
+  } else if (length % 5 === 0) {
+    input = input
       .split("")
       .map((char) => char.charCodeAt(0))
       .join(" ");
   }
 
-  return result === "" ? input : result;
+  return input;
 }
 
-const input = "Hello World";
-console.log(transformString(input)); 
+let input = "Hello World";
+let output = transformString(input);
+console.log(`Output: "${output}"`); 
