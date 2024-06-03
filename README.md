@@ -46,6 +46,19 @@ Technologies
 HTML
 CSS
 JavaScript
+
+Solutions to Coding Challenges
+Problem 1: Contiguous Subarray Sum
+Description: Given an array of integers and a target sum, determine if there exists a contiguous subarray within the array that sums up to the target.
+
+Implementation: Sliding window technique is used for an efficient solution.
+
+Problem 2: String Transformation
+Description: Given a string, transform it based on certain rules depending on its length being divisible by 3, 5, or both.
+
+Implementation: Conditional logic is applied to reverse the string, replace characters with ASCII codes, or perform both operations based on the string's length.
+
+
 License
 This project is licensed under the MIT License.
 `https://coa-challenge.vercel.app/`
